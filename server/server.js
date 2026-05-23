@@ -14,8 +14,25 @@ const ecoRoutes = require('./routes/eco');
 
 const app = express();
 
-app.use(cors());
+const allowedOrigin = process.env.CORS_ORIGIN || '*';
+
+app.use(cors({
+  origin: allowedOrigin === '*' ? true : allowedOrigin,
+  credentials: true
+}));
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'EcoCreds backend is running',
+    docs: '/api/health'
+  });
+});
+
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
@@ -27,10 +44,7 @@ app.use('/api/eco', ecoRoutes);
 const PORT = process.env.PORT || 5000;
 
 mongoose
-.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+.connect(process.env.MONGO_URI)
 .then(() =>
   app.listen(PORT, () =>
     console.log(`Server running on ${PORT}`)
