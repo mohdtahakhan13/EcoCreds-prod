@@ -16,10 +16,26 @@ const app = express();
 
 const allowedOrigin = process.env.CORS_ORIGIN || '*';
 
-app.use(cors({
-  origin: allowedOrigin === '*' ? true : allowedOrigin,
+// Normalize CORS origin (remove trailing slash)
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || origin === '*' || allowedOrigin === '*') {
+      callback(null, true);
+    } else {
+      // Remove trailing slash for comparison
+      const normalizedAllowed = allowedOrigin.replace(/\/$/, '');
+      const normalizedOrigin = origin.replace(/\/$/, '');
+      if (normalizedOrigin === normalizedAllowed) {
+        callback(null, true);
+      } else {
+        callback(new Error('CORS not allowed'));
+      }
+    }
+  },
   credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/', (req, res) => {
