@@ -163,7 +163,7 @@
 
 // src/pages/Signup.jsx
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../utils/api";
 import { setToken } from "../utils/auth";
 
 const STEPS = ['Account', 'Personal', 'Done'];
@@ -191,7 +191,7 @@ export default function Signup() {
   const submit = async e => {
     e.preventDefault(); setErr(""); setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", form);
+      const res = await api.post("/auth/signup", form);
       setToken(res.data.token);
       setStep(2);
       setTimeout(() => { window.location.href = "/dashboard"; }, 1200);

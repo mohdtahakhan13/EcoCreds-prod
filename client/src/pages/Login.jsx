@@ -120,7 +120,7 @@
 
 // src/pages/Login.jsx
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../utils/api";
 import { setToken } from "../utils/auth";
 
 export default function Login() {
@@ -134,7 +134,7 @@ export default function Login() {
   const submit = async e => {
     e.preventDefault(); setErr(""); setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", form);
+      const res = await api.post("/auth/login", form);
       setToken(res.data.token);
       window.location.href = "/dashboard";
     } catch (error) {
