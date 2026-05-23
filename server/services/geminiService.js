@@ -1,10 +1,38 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const Groq = require("groq-sdk");
 
+// ─────────────────────────────────────────────
+//  MODEL CLIENTS
+//  Primary  : Google Gemini
+//  Secondary: Groq (fallback when Gemini fails)
+// ─────────────────────────────────────────────
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+const groqClient = process.env.GROQ_API_KEY
+  ? new Groq({ apiKey: process.env.GROQ_API_KEY })
+  : null;
+
+const GROQ_MODEL = "llama-3.3-70b-versatile"; // strong reasoning model on Groq
+
+// ─────────────────────────────────────────────
+//  LOGGER UTILITY
+// ─────────────────────────────────────────────
+function log(tag, message, extra = "") {
+  const ts = new Date().toISOString();
+  console.log(`[${ts}] [AIService] [${tag}] ${message}`, extra ? extra : "");
+}
+
+function logError(tag, message, error) {
+  const ts = new Date().toISOString();
+  console.error(
+    `[${ts}] [AIService] [${tag}] ❌ ${message}`,
+    error?.message || error
+  );
+}
 
 // ─────────────────────────────────────────────
 //  CARBON INTENSITY REFERENCE TABLE (kg CO₂e)
-//  Used inside prompts so Gemini reasons from
+//  Used inside prompts so the model reasons from
 //  real-world emission factors, not guesswork.
 // ─────────────────────────────────────────────
 const CARBON_REFERENCE = `
@@ -42,7 +70,7 @@ ECO SCORE FORMULA (0 – 100, higher = greener):
 
 // ─────────────────────────────────────────────
 //  SAFE JSON PARSER
-//  Gemini sometimes wraps JSON in markdown fences.
+//  Models sometimes wrap JSON in markdown fences.
 // ─────────────────────────────────────────────
 function parseJSON(text) {
   // Strip ```json ... ``` or ``` ... ``` fences
@@ -54,7 +82,7 @@ function parseJSON(text) {
 }
 
 // ─────────────────────────────────────────────
-//  FALLBACK ECO DATA  (used if Gemini fails)
+//  FALLBACK ECO DATA  (used if BOTH models fail)
 // ─────────────────────────────────────────────
 function fallbackEcoData(reason = "AI error") {
   return {
@@ -67,14 +95,111 @@ function fallbackEcoData(reason = "AI error") {
   };
 }
 
+// ─────────────────────────────────────────────
+//  GENERIC MODEL CALLERS
+//  Each returns raw text from the model.
+// ─────────────────────────────────────────────
+
+/**
+ * Call Gemini (Primary Model)
+ */
+async function callGemini(prompt) {
+  // UNCOMMENT the line below to test Gemini success again.
+  // Currently throwing an error to force the fallback to Groq:
+  // throw new Error("Simulated Gemini API key down / service unavailable error");
+
+  log("GEMINI", "Sending request to Gemini ...");
+  const startTime = Date.now();
+
+  const model = genAI.getGenerativeModel({ model: "gemini-3.1-flash-lite" });
+  const result = await model.generateContent(prompt);
+  const text = result.response.text();
+
+  const elapsed = Date.now() - startTime;
+  log("GEMINI", `✅ Response received in ${elapsed}ms (${text.length} chars)`);
+
+  return text;
+}
+
+/**
+ * Call Groq (Secondary / Fallback Model)
+ */
+async function callGroq(prompt) {
+  if (!groqClient) {
+    throw new Error(
+      "GROQ_API_KEY is not configured – cannot use fallback model"
+    );
+  }
+
+  log("GROQ", `Sending request to Groq ...`);
+  const startTime = Date.now();
+
+  const chatCompletion = await groqClient.chat.completions.create({
+    messages: [
+      {
+        role: "user",
+        content: prompt,
+      },
+    ],
+    model: GROQ_MODEL,
+    temperature: 0.3, // keep responses deterministic
+    max_tokens: 2048,
+  });
+
+  const text = chatCompletion.choices[0]?.message?.content || "";
+
+  const elapsed = Date.now() - startTime;
+  log("GROQ", `✅ Response received in ${elapsed}ms (${text.length} chars)`);
+
+  return text;
+}
+
+/**
+ * Call Primary model first, fall back to Secondary on error.
+ * Returns: { text: string, model: "gemini" | "groq" }
+ */
+async function callWithFallback(prompt, context = "unknown") {
+  let geminiError = null;
+
+  // ── Try Primary: Gemini ───────────────────────────
+  try {
+    const text = await callGemini(prompt);
+    return { text, model: "gemini" };
+  } catch (primaryError) {
+    geminiError = primaryError;
+    logError(
+      "GEMINI",
+      `Primary model failed for [${context}]. Reason: ${primaryError.message}`
+    );
+    log("FALLBACK", `⚠️  Switching to secondary model (Groq ${GROQ_MODEL}) for [${context}]...`);
+  }
+
+  // ── Try Secondary: Groq ───────────────────────────
+  try {
+    const text = await callGroq(prompt);
+    log("FALLBACK", `✅ Secondary model (Groq) succeeded for [${context}]`);
+    return { text, model: "groq" };
+  } catch (secondaryError) {
+    logError(
+      "GROQ",
+      `Secondary model also failed for [${context}]. Reason: ${secondaryError.message}`
+    );
+    throw new Error(
+      `Both primary (Gemini) and secondary (Groq) models failed for [${context}]. ` +
+      `Gemini: ${geminiError?.message || "unknown"}. Groq: ${secondaryError.message}`
+    );
+  }
+}
+
 // ═══════════════════════════════════════════════════════════════
 //  getEcoScore(product)
 //  Returns: { ecoScore, carbonFootprint, breakdown, badges, explanation }
 // ═══════════════════════════════════════════════════════════════
 async function getEcoScore(product) {
-  try {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+  const fnName = `getEcoScore(${product.name || "?"})`;
+  log("FLOW", `━━━ ${fnName} START ━━━`);
 
+  try {
     const prompt = `
 You are an environmental impact analyst. Estimate the carbon footprint and eco score for the product below.
 
@@ -116,8 +241,9 @@ Respond ONLY with a valid JSON object (no markdown fences, no extra text):
 }
 `;
 
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
+    const { text, model } = await callWithFallback(prompt, fnName);
+    log("FLOW", `Model used for ${fnName}: ${model.toUpperCase()}`);
+
     const parsed = parseJSON(text);
 
     // Validate required fields
@@ -125,15 +251,17 @@ Respond ONLY with a valid JSON object (no markdown fences, no extra text):
       typeof parsed.ecoScore !== "number" ||
       typeof parsed.carbonFootprint !== "number"
     ) {
-      throw new Error("Invalid JSON shape from Gemini");
+      throw new Error(`Invalid JSON shape from ${model} – missing ecoScore or carbonFootprint`);
     }
 
     // Clamp score just in case
     parsed.ecoScore = Math.max(0, Math.min(100, Math.round(parsed.ecoScore)));
+    parsed._modelUsed = model; // track which model was used
 
+    log("FLOW", `━━━ ${fnName} SUCCESS (score=${parsed.ecoScore}, model=${model}) ━━━`);
     return parsed;
   } catch (error) {
-    console.error("[geminiService] getEcoScore error:", error.message);
+    logError("FLOW", `${fnName} FAILED completely`, error);
     return fallbackEcoData("Could not calculate eco score: " + error.message);
   }
 }
@@ -146,10 +274,11 @@ Respond ONLY with a valid JSON object (no markdown fences, no extra text):
 //           where productName matches EXACTLY one candidate
 // ═══════════════════════════════════════════════════════════════
 async function getBestAlternative(originalProduct, candidateProducts) {
-  try {
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+  const fnName = `getBestAlternative(${originalProduct.name || "?"})`;
+  log("FLOW", `━━━ ${fnName} START ━━━`);
 
-    // Build a compact, informative list for Gemini to reason over
+  try {
+    // Build a compact, informative list for the model to reason over
     const candidateList = candidateProducts
       .map(
         (p, i) =>
@@ -190,20 +319,27 @@ Respond ONLY with a valid JSON object (no markdown, no extra text):
 }
 `;
 
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
+    const { text, model } = await callWithFallback(prompt, fnName);
+    log("FLOW", `Model used for ${fnName}: ${model.toUpperCase()}`);
+
     const parsed = parseJSON(text);
 
     if (!parsed.productName) {
-      throw new Error("Gemini did not return a productName");
+      throw new Error(`${model} did not return a productName`);
     }
+
+    log(
+      "FLOW",
+      `━━━ ${fnName} SUCCESS (picked="${parsed.productName}", model=${model}) ━━━`
+    );
 
     return {
       productName: parsed.productName.trim(),
       reason: parsed.reason || "Most eco-friendly option available",
+      _modelUsed: model,
     };
   } catch (error) {
-    console.error("[geminiService] getBestAlternative error:", error.message);
+    logError("FLOW", `${fnName} FAILED completely`, error);
     return {
       productName: null,
       reason: "Could not determine alternative: " + error.message,

@@ -51,7 +51,7 @@ router.get("/", (req, res) => {
   const q = (req.query.q || "").trim();
   const categoryFilter = (req.query.category || "").toLowerCase().trim();
   const page = Math.max(1, parseInt(req.query.page) || 1);
-  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit) || 20));
+  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit) || 100));
 
   const products = loadProducts();
 

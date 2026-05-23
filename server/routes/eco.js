@@ -65,83 +65,71 @@ router.post("/score", async (req, res) => {
 //
 //  Body:
 //    product     – the product the user is currently viewing
-//    searchQuery – the original search term (to find similar DB items)
 //
 //  Flow:
-//    1. Find candidate products in DB matching searchQuery (exclude current product).
-//    2. Ask Gemini to pick the best eco-friendly alternative by NAME.
-//    3. Fuzzy-match the returned name back to a DB record.
-//    4. Call getEcoScore() for the chosen alternative.
+//    1. Find the product in the DB to get its current greenAlternativeId.
+//    2. If it has a greenAlternativeId, fetch that alternative from the DB.
+//    3. If no greenAlternativeId, it means the product is already eco-friendly or has no alternative.
+//    4. Call getEcoScore() for the chosen alternative (if any).
 //    5. Return the alternative product + its eco score.
 // ═══════════════════════════════════════════════════════════
 router.post("/alternative", async (req, res) => {
-  const { product, searchQuery } = req.body;
+  const { product } = req.body;
 
-  if (!product || !searchQuery) {
+  if (!product || !product._id) {
     return res.status(400).json({
       success: false,
-      message: "Both 'product' and 'searchQuery' are required.",
+      message: "Product object with _id is required.",
     });
   }
 
   try {
-    // ── Step 1: find candidates ──────────────────────────────
-    const candidates = findCandidates(searchQuery, product._id);
+    const products = loadProducts();
+    const dbProduct = products.find(p => String(p._id) === String(product._id));
 
-    if (candidates.length === 0) {
+    if (!dbProduct) {
+      return res.status(404).json({
+        success: false,
+        message: "Product not found in database.",
+      });
+    }
+
+    if (!dbProduct.greenAlternativeId) {
       return res.json({
         success: true,
         data: {
           found: false,
-          message: "No similar products found in the database for this search.",
+          message: "This product is already eco-friendly or no greener alternative is currently available.",
           alternative: null,
           ecoScore: null,
         },
       });
     }
 
-    // ── Step 2: ask Gemini for the best alternative name ─────
-    const { productName, reason } = await getBestAlternative(product, candidates);
+    const alternativeProduct = products.find(p => String(p._id) === String(dbProduct.greenAlternativeId));
 
-    if (!productName) {
+    if (!alternativeProduct) {
       return res.json({
         success: true,
         data: {
           found: false,
-          message: "AI could not determine a greener alternative.",
+          message: "Alternative product record not found in database.",
           alternative: null,
           ecoScore: null,
         },
       });
     }
 
-    // ── Step 3: fuzzy-match name → DB record ─────────────────
-    //   First try exact match (case-insensitive), then substring match.
-    const nameLower = productName.toLowerCase();
-    let matchedProduct =
-      candidates.find((p) => p.name.toLowerCase() === nameLower) ||
-      candidates.find((p) => p.name.toLowerCase().includes(nameLower)) ||
-      candidates.find((p) => nameLower.includes(p.name.toLowerCase()));
+    // Get eco score for the chosen alternative
+    const alternativeEcoScore = await getEcoScore(alternativeProduct);
 
-    // Absolute fallback: first candidate if nothing matched
-    if (!matchedProduct) {
-      console.warn(
-        `[/eco/alternative] Could not match "${productName}" to a DB record. Using first candidate.`
-      );
-      matchedProduct = candidates[0];
-    }
-
-    // ── Step 4: get eco score for the chosen alternative ─────
-    const alternativeEcoScore = await getEcoScore(matchedProduct);
-
-    // ── Step 5: respond ──────────────────────────────────────
     return res.json({
       success: true,
       data: {
         found: true,
-        alternative: matchedProduct,
+        alternative: alternativeProduct,
         ecoScore: alternativeEcoScore,
-        aiReason: reason,
+        aiReason: `This alternative uses greener materials and sustainable packaging compared to ${dbProduct.name}.`,
       },
     });
   } catch (error) {

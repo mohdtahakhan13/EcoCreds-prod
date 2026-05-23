@@ -8,7 +8,8 @@
     "material": "organic rice grain",
     "packaging": "paper bag",
     "brand": "BioFarm",
-    "image_url": "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/8/1/81eKCEbu0nL.jpg"
+    "image_url": "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/8/1/81eKCEbu0nL.jpg",
+    "greenAlternativeId": null
   },
   {
     "_id": "1001",
@@ -19,7 +20,8 @@
     "material": "fresh apple",
     "packaging": "paper wrap",
     "brand": "GreenLeaf",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.n802hvpsx7i4iWd2dDiGNwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.n802hvpsx7i4iWd2dDiGNwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1002",
@@ -30,7 +32,8 @@
     "material": "dairy milk",
     "packaging": "tetra pack",
     "brand": "FarmFresh",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.XVqQNGIvHwdQK_9mJ4iWCgHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.XVqQNGIvHwdQK_9mJ4iWCgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1042"
   },
   {
     "_id": "1003",
@@ -41,7 +44,8 @@
     "material": "eggs",
     "packaging": "cardboard carton",
     "brand": "FarmFresh",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.-ygRuU145F83Lq-JSbIJpAHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.-ygRuU145F83Lq-JSbIJpAHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1045"
   },
   {
     "_id": "1004",
@@ -52,7 +56,8 @@
     "material": "oats, honey, dried fruit",
     "packaging": "paper pouch",
     "brand": "NutriGrain",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.uWnyjGb9d8WZq7H67wGJPAHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.uWnyjGb9d8WZq7H67wGJPAHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1005",
@@ -63,29 +68,32 @@
     "material": "tomato",
     "packaging": "styrofoam tray with plastic film wrap",
     "brand": "QuickFarm",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.E7swHaqRZ1Ummlk_aLUANwHaE7?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.E7swHaqRZ1Ummlk_aLUANwHaE7?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1043"
   },
   {
     "_id": "1006",
     "name": "Premium Olive Oil 500ml",
     "description": "Cold pressed extra virgin olive oil.",
     "category": "Groceries",
-    "price": 259.30,
+    "price": 259.3,
     "material": "olive oil",
     "packaging": "glass bottle",
     "brand": "Olivia",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.4AMOAjg_t8tiF1-TNg8EXwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.4AMOAjg_t8tiF1-TNg8EXwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1007",
     "name": "Instant Noodles Pack x5",
     "description": "Artificial flavoured instant noodles with synthetic seasoning sachets.",
     "category": "Groceries",
-    "price": 95.00,
+    "price": 95,
     "material": "refined wheat, palm oil, artificial flavours, MSG",
     "packaging": "multi-layer plastic film, inner plastic sachets",
     "brand": "QuickBite",
-    "image_url": "https://blackboxreviews.com.au/wp-content/uploads/bfi_thumb/521257-oqolorf4qigk3kfmyzml9ay8857l34nz4o98dqa430.jpg"
+    "image_url": "https://blackboxreviews.com.au/wp-content/uploads/bfi_thumb/521257-oqolorf4qigk3kfmyzml9ay8857l34nz4o98dqa430.jpg",
+    "greenAlternativeId": "1044"
   },
   {
     "_id": "1008",
@@ -96,7 +104,8 @@
     "material": "herbal plant extract, natural surfactants",
     "packaging": "plastic bottle",
     "brand": "EcoGlow",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.QCSxMDQxwajgWJD-aS2BQgHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.QCSxMDQxwajgWJD-aS2BQgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1046"
   },
   {
     "_id": "1009",
@@ -107,51 +116,56 @@
     "material": "natural soap base, shea butter",
     "packaging": "paper box",
     "brand": "DoveCare",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.Z0ofhGLsVMUUaJKZcVji2gHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.Z0ofhGLsVMUUaJKZcVji2gHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1010",
     "name": "Silicone Shampoo 300ml",
     "description": "Intensive repair shampoo with dimethicone silicone and synthetic fragrance.",
     "category": "Personal Care",
-    "price": 299.00,
+    "price": 299,
     "material": "silicone dimethicone, synthetic surfactants, artificial fragrance, parabens",
     "packaging": "multi-layer virgin plastic bottle with plastic pump dispenser",
     "brand": "GlossLab",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.TQspywSCVnEKZEz3LYhRBgHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.TQspywSCVnEKZEz3LYhRBgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1046"
   },
   {
     "_id": "1011",
     "name": "Charcoal Face Wash 100ml",
     "description": "Deep cleansing activated charcoal face wash.",
     "category": "Personal Care",
-    "price": 199.00,
+    "price": 199,
     "material": "activated charcoal, natural clay, aloe vera",
     "packaging": "recycled plastic tube",
     "brand": "PureSkin",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.NviI6A83aRkMnVFxMCBvpAHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.NviI6A83aRkMnVFxMCBvpAHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1012",
     "name": "Aerosol Deodorant 150ml",
     "description": "24hr protection aerosol body spray with synthetic fragrance compounds.",
     "category": "Personal Care",
-    "price": 189.00,
+    "price": 189,
     "material": "aluminium chlorohydrate, synthetic fragrance, propellant gases, butane",
     "packaging": "aluminium aerosol can with plastic cap",
     "brand": "FreshBlast",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.euOxRc0C6TKIN99-Yr-6HgAAAA?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.euOxRc0C6TKIN99-Yr-6HgAAAA?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1047"
   },
   {
     "_id": "1013",
     "name": "Bamboo Toothbrush",
     "description": "Biodegradable toothbrush with bamboo handle and plant-based bristles.",
     "category": "Personal Care",
-    "price": 79.00,
+    "price": 79,
     "material": "organic bamboo handle, plant-based nylon bristles",
     "packaging": "recycled cardboard box",
     "brand": "GreenSmile",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.DvFihVgzZE6Qo6SUhieAtgHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.DvFihVgzZE6Qo6SUhieAtgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1014",
@@ -162,18 +176,20 @@
     "material": "plant-derived cleaning agents, citrus extract",
     "packaging": "plastic bottle",
     "brand": "SparkClean",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.Z28jSG6s0bMkzOJJLuI7IQHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.Z28jSG6s0bMkzOJJLuI7IQHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1048"
   },
   {
     "_id": "1015",
     "name": "Heavy Duty Chemical Cleaner 1L",
     "description": "Industrial-strength bleach and ammonia surface cleaner.",
     "category": "Household",
-    "price": 245.00,
+    "price": 245,
     "material": "sodium hypochlorite bleach, ammonia, synthetic phosphates, artificial dyes",
     "packaging": "virgin HDPE plastic bottle with non-recyclable trigger spray pump",
     "brand": "ChemiClean",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.mOtSJ6mD7I8vxDz3SxxDZwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.mOtSJ6mD7I8vxDz3SxxDZwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1048"
   },
   {
     "_id": "1016",
@@ -184,128 +200,140 @@
     "material": "microfiber polyester blend",
     "packaging": "paper wrap",
     "brand": "CleanPro",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.744jVC2ErGuN02_4wtIqqQHaJX?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.744jVC2ErGuN02_4wtIqqQHaJX?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1017",
     "name": "Disposable Plastic Plates 50pcs",
     "description": "Single-use virgin polystyrene plates for parties.",
     "category": "Household",
-    "price": 189.00,
+    "price": 189,
     "material": "virgin polystyrene plastic, synthetic dyes",
     "packaging": "thick plastic shrink wrap",
     "brand": "EasyParty",
-    "image_url": "https://i5.walmartimages.com/seo/Disposable-Plastic-Plates-Blue-7-Inches-Dessert-Plates-Strong-Sturdy-Party-Dinner-Holiday-Picnic-Travel-Party-Pack-50-By-Amcrate_b94ad297-42de-4b48-95c5-f8b66f04a114.c2c778e2d3b2acbf3fda33af199ce59e.jpeg"
+    "image_url": "https://i5.walmartimages.com/seo/Disposable-Plastic-Plates-Blue-7-Inches-Dessert-Plates-Strong-Sturdy-Party-Dinner-Holiday-Picnic-Travel-Party-Pack-50-By-Amcrate_b94ad297-42de-4b48-95c5-f8b66f04a114.c2c778e2d3b2acbf3fda33af199ce59e.jpeg",
+    "greenAlternativeId": "1018"
   },
   {
     "_id": "1018",
     "name": "Bamboo Dinner Plates Set of 4",
     "description": "Reusable dinner plates made from organic bamboo fiber. Dishwasher safe.",
     "category": "Household",
-    "price": 599.00,
+    "price": 249,
     "material": "organic bamboo fiber, natural food-grade resin",
     "packaging": "recycled cardboard box",
     "brand": "BambooHome",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.1W6zPCVDGNH5T_y7BapZCwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.1W6zPCVDGNH5T_y7BapZCwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1019",
     "name": "Scented Paraffin Candles Pack of 6",
     "description": "Decorative paraffin wax candles with synthetic fragrance oils.",
     "category": "Household",
-    "price": 349.00,
+    "price": 349,
     "material": "paraffin wax petroleum byproduct, synthetic fragrance, lead-free cotton wick",
     "packaging": "virgin plastic clamshell with cardboard insert",
     "brand": "GlowHome",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.Q3lGo1HECUyTf5cJqmEZoQAAAA?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.Q3lGo1HECUyTf5cJqmEZoQAAAA?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1020"
   },
   {
     "_id": "1020",
     "name": "Soy Wax Candle 200g",
     "description": "Hand-poured soy wax candle with essential oils and cotton wick.",
     "category": "Household",
-    "price": 449.00,
+    "price": 379,
     "material": "natural soy wax, essential oils, organic cotton wick",
     "packaging": "recycled glass jar, kraft paper label",
     "brand": "NaturalGlow",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.ZhoKdJolJLaGxkitb0aAMAHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.ZhoKdJolJLaGxkitb0aAMAHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1021",
     "name": "Cotton T-Shirt M",
     "description": "Comfortable everyday cotton t-shirt.",
     "category": "Clothing",
-    "price": 799.00,
+    "price": 799,
     "material": "100% cotton",
     "packaging": "paper wrap",
     "brand": "BasicWear",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.38MiWc4MCY5o5ZNyAIWLwAHaMZ?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.38MiWc4MCY5o5ZNyAIWLwAHaMZ?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1049"
   },
   {
     "_id": "1022",
     "name": "Fast Fashion Polyester Jacket",
     "description": "Trendy windbreaker made from virgin polyester with synthetic insulation.",
     "category": "Clothing",
-    "price": 1899.00,
+    "price": 1899,
     "material": "100% virgin polyester shell, synthetic insulation fill, nylon lining, plastic zippers",
     "packaging": "multi-layer plastic poly bag with cardboard insert",
     "brand": "QuickWear",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.r1XpCv5echzOrb1gyphZegHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.r1XpCv5echzOrb1gyphZegHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1023"
   },
   {
     "_id": "1023",
     "name": "Organic Cotton Jacket",
     "description": "Warm jacket with GOTS certified organic cotton and natural wool lining.",
     "category": "Clothing",
-    "price": 2499.00,
+    "price": 1999,
     "material": "GOTS certified organic cotton shell, natural wool lining, recycled metal zippers",
     "packaging": "recycled kraft paper bag",
     "brand": "PureWear",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.1LGtzj7qMKa-n3OsiyJiiAHaLW?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.1LGtzj7qMKa-n3OsiyJiiAHaLW?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1024",
     "name": "Synthetic Leather Handbag",
     "description": "Trendy handbag made from PU synthetic leather with chrome-tanned finish.",
     "category": "Fashion",
-    "price": 1299.00,
+    "price": 1299,
     "material": "PU synthetic leather, chrome-tanned petroleum coating, virgin plastic lining, metal hardware",
     "packaging": "virgin plastic dust bag with styrofoam padding in cardboard box",
     "brand": "UrbanStyle",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.fP0mS0mpuuRPARvQ-dfyLgHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.fP0mS0mpuuRPARvQ-dfyLgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1025"
   },
   {
     "_id": "1025",
     "name": "Jute Tote Bag",
     "description": "Handwoven jute tote with organic cotton handles. Fully biodegradable.",
     "category": "Fashion",
-    "price": 349.00,
+    "price": 349,
     "material": "natural jute fiber, organic cotton rope handles",
     "packaging": "recycled paper wrap",
     "brand": "EarthCarry",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.8wniMnHT5iQAbWojCsmgNQHaII?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.8wniMnHT5iQAbWojCsmgNQHaII?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1026",
     "name": "Leather Dress Shoes",
     "description": "Formal dress shoes with genuine leather upper and rubber sole.",
     "category": "Fashion",
-    "price": 3499.00,
+    "price": 3499,
     "material": "genuine cowhide leather upper, synthetic rubber sole, chrome-tanned insole",
     "packaging": "cardboard shoe box with tissue paper",
     "brand": "ClassicStep",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.oJ8-NkXN9bPSpbZu1tY3pAHaGd?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.oJ8-NkXN9bPSpbZu1tY3pAHaGd?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1027"
   },
   {
     "_id": "1027",
     "name": "Hemp Canvas Sneakers",
     "description": "Casual sneakers made from natural hemp canvas with recycled rubber sole.",
     "category": "Fashion",
-    "price": 1899.00,
+    "price": 1899,
     "material": "natural hemp canvas upper, recycled rubber sole, organic cotton laces",
     "packaging": "recycled cardboard box, no tissue",
     "brand": "EcoStep",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.fbJytZwVAdxX6hgkkeZexwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.fbJytZwVAdxX6hgkkeZexwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1028",
@@ -316,149 +344,283 @@
     "material": "LED chip, aluminium heatsink, recycled plastic base",
     "packaging": "recycled cardboard box",
     "brand": "Philips",
-    "image_url": "https://tse2.mm.bing.net/th/id/OIP.Ty03RCcqgMKW3niyKixmwwHaHm?pid=Api&P=0&h=180"
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.Ty03RCcqgMKW3niyKixmwwHaHm?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1029",
     "name": "Power Bank 10000mAh",
     "description": "Portable mobile charger with fast charging.",
     "category": "Electronics",
-    "price": 1542.90,
+    "price": 1542.9,
     "material": "lithium-ion battery, recycled ABS plastic shell",
     "packaging": "cardboard box",
     "brand": "EcoCharge",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.2bvSR7CoaLy9L5MDarZFLQHaIG?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.2bvSR7CoaLy9L5MDarZFLQHaIG?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1050"
   },
   {
     "_id": "1030",
     "name": "Gaming Mechanical Keyboard",
     "description": "RGB backlit mechanical gaming keyboard with non-recyclable components.",
     "category": "Electronics",
-    "price": 4999.00,
+    "price": 4999,
     "material": "virgin ABS plastic body, non-recyclable PCB, heavy metal switches, RGB LED strip",
     "packaging": "excessive multi-layer styrofoam in oversized virgin plastic wrapped box",
     "brand": "GameForce",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.EXwXr2Brthq9d2kMfkqSGQHaF6?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.EXwXr2Brthq9d2kMfkqSGQHaF6?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1031"
   },
   {
     "_id": "1031",
     "name": "Solar Powered Desk Lamp",
     "description": "LED desk lamp with built-in solar panel and rechargeable battery.",
     "category": "Electronics",
-    "price": 1299.00,
+    "price": 1299,
     "material": "recycled aluminium body, solar panel, LED chip, recycled plastic base",
     "packaging": "recycled cardboard, no styrofoam",
     "brand": "SolarBright",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.jFCWH4fUAmOoS95rnyw3eAHaEl?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.jFCWH4fUAmOoS95rnyw3eAHaEl?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1032",
     "name": "Single-Use Camera",
     "description": "Disposable film camera with built-in flash. Entire unit discarded after use.",
     "category": "Electronics",
-    "price": 799.00,
+    "price": 799,
     "material": "virgin plastic body, alkaline battery, chemical film, electronic flash unit",
     "packaging": "non-recyclable foil sealed cardboard",
     "brand": "SnapGo",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.Nr3O2xQGA6l-kflh-d-fzgHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.Nr3O2xQGA6l-kflh-d-fzgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1050"
   },
   {
     "_id": "1033",
     "name": "A4 Recycled Notebook",
     "description": "A4 notebook made from 100% post-consumer recycled paper.",
     "category": "Stationery",
-    "price": 79.00,
+    "price": 79,
     "material": "100% recycled paper, cardboard cover",
     "packaging": "paper wrap",
     "brand": "EcoWrite",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.7juDRdCmcnYjO-7Uzs4wiwHaJM?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.7juDRdCmcnYjO-7Uzs4wiwHaJM?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1034",
     "name": "Glitter Gel Pen Pack 10pcs",
     "description": "Pack of 10 glitter gel pens with metallic ink and non-refillable cartridges.",
     "category": "Stationery",
-    "price": 149.00,
+    "price": 149,
     "material": "virgin plastic body, synthetic glitter microplastics, metal nib, non-recyclable ink cartridge",
     "packaging": "hard plastic clamshell blister pack",
     "brand": "GlitterWrite",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.C7nggi992PS5auXTKEH5sAAAAA?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.C7nggi992PS5auXTKEH5sAAAAA?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1035"
   },
   {
     "_id": "1035",
     "name": "Recycled Paper Refillable Pen",
     "description": "Pen body made from recycled newspaper. Refillable ink cartridge included.",
     "category": "Stationery",
-    "price": 55.00,
+    "price": 55,
     "material": "recycled newspaper barrel, water-based ink, minimal metal nib",
     "packaging": "recycled cardboard sleeve",
     "brand": "GreenInk",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.R2rfuyJyNFBAd4qouT_ETwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.R2rfuyJyNFBAd4qouT_ETwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1036",
     "name": "Plastic Highlighter Set 6pcs",
     "description": "Set of 6 fluorescent highlighters with xylene-based ink.",
     "category": "Stationery",
-    "price": 120.00,
+    "price": 120,
     "material": "virgin plastic barrel, xylene solvent ink, non-recyclable felt tip",
     "packaging": "plastic blister card",
     "brand": "BrightMark",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.BOarzgD5kb97p_LWoyijrwHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.BOarzgD5kb97p_LWoyijrwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1051"
   },
   {
     "_id": "1037",
     "name": "Seed Paper Notepad",
     "description": "Notepad made from plantable seed paper. Plant it after use to grow wildflowers.",
     "category": "Stationery",
-    "price": 199.00,
+    "price": 199,
     "material": "seed-embedded recycled paper, vegetable-based ink",
     "packaging": "no packaging, tied with jute twine",
     "brand": "GrowNote",
-    "image_url": "https://tse1.mm.bing.net/th/id/OIP.-EWjh4ErqyJqnvP5qdtdAQHaHT?pid=Api&P=0&h=180"
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.-EWjh4ErqyJqnvP5qdtdAQHaHT?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   },
   {
     "_id": "1038",
     "name": "Whey Protein Powder 1kg",
     "description": "Chocolate flavoured whey protein with artificial sweeteners.",
     "category": "Sports & Fitness",
-    "price": 2199.00,
+    "price": 2199,
     "material": "dairy whey concentrate, artificial flavours, sucralose sweetener, soy lecithin",
     "packaging": "oversized virgin plastic tub with foil seal and plastic scoop",
     "brand": "BulkGain",
-    "image_url": "https://sp.yimg.com/ib/th?id=OPAC.doQ%2ftvcAeincGQ474C474&o=5&pid=21.1&w=160&h=105"
+    "image_url": "https://sp.yimg.com/ib/th?id=OPAC.doQ%2ftvcAeincGQ474C474&o=5&pid=21.1&w=160&h=105",
+    "greenAlternativeId": "1039"
   },
   {
     "_id": "1039",
     "name": "Plant Protein Powder 500g",
     "description": "Pea and hemp based protein powder with natural cocoa flavour.",
     "category": "Sports & Fitness",
-    "price": 1599.00,
+    "price": 1599,
     "material": "pea protein isolate, hemp seed protein, natural cocoa, coconut sugar",
     "packaging": "kraft paper pouch with resealable zip",
     "brand": "PureFuel",
-    "image_url": "https://sp.yimg.com/ib/th?id=OPAC.UdUbNZspGrl%2bWQ474C474&o=5&pid=21.1&w=160&h=105"
+    "image_url": "https://sp.yimg.com/ib/th?id=OPAC.UdUbNZspGrl%2bWQ474C474&o=5&pid=21.1&w=160&h=105",
+    "greenAlternativeId": null
   },
   {
     "_id": "1040",
     "name": "Synthetic Rubber Yoga Mat",
     "description": "Standard yoga mat made from virgin PVC with chemical stabilisers.",
     "category": "Sports & Fitness",
-    "price": 899.00,
+    "price": 899,
     "material": "virgin PVC polyvinyl chloride, chemical plasticisers, phthalates",
     "packaging": "plastic shrink wrap with plastic carry strap",
     "brand": "FlexFit",
-    "image_url": "https://tse3.mm.bing.net/th/id/OIP.x4DdBXzua1ujZGjn_3J3-gHaJQ?pid=Api&P=0&h=180"
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.x4DdBXzua1ujZGjn_3J3-gHaJQ?pid=Api&P=0&h=180",
+    "greenAlternativeId": "1041"
   },
   {
     "_id": "1041",
     "name": "Natural Rubber Yoga Mat",
     "description": "Non-slip yoga mat made from sustainably tapped natural rubber.",
     "category": "Sports & Fitness",
-    "price": 1499.00,
+    "price": 999,
     "material": "natural rubber, jute top layer, no chemical plasticisers",
     "packaging": "recycled cardboard tube, cotton carry strap",
     "brand": "EcoFlow",
-    "image_url": "https://tse4.mm.bing.net/th/id/OIP.3GHI0dYfpNf1VRuxO70VnAHaHa?pid=Api&P=0&h=180"
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.3GHI0dYfpNf1VRuxO70VnAHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1042",
+    "name": "Oat Milk 1L",
+    "description": "Plant-based oat milk, lower carbon footprint than dairy.",
+    "category": "Groceries",
+    "price": 210,
+    "material": "oats, water",
+    "packaging": "recycled tetra pack",
+    "brand": "EcoOats",
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.xPz8UUN_kCF9A0YGaYr0WgHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1043",
+    "name": "Loose Organic Tomatoes 500g",
+    "description": "Fresh organic tomatoes packed in a biodegradable paper bag.",
+    "category": "Groceries",
+    "price": 245,
+    "material": "organic tomatoes",
+    "packaging": "paper bag",
+    "brand": "FarmFresh",
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.M9604pEUFPkqBNCfCDUOkAHaFI?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1044",
+    "name": "Organic Whole Wheat Noodles x5",
+    "description": "Healthy whole wheat noodles with plastic-free packaging.",
+    "category": "Groceries",
+    "price": 110,
+    "material": "organic whole wheat",
+    "packaging": "recycled cardboard",
+    "brand": "NoodleEco",
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.dJ7YZkBw_pHC8fQdJIeRgwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1045",
+    "name": "Free Range Organic Eggs 12pcs",
+    "description": "Organic eggs from free-range hens in eco-friendly carton.",
+    "category": "Groceries",
+    "price": 275,
+    "material": "organic eggs",
+    "packaging": "recycled cardboard carton",
+    "brand": "HappyHens",
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.VyfrzTFc5LNHatbTGEcSfwHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1046",
+    "name": "Natural Solid Shampoo Bar 100g",
+    "description": "Plastic-free shampoo bar made from natural ingredients.",
+    "category": "Personal Care",
+    "price": 180,
+    "material": "natural oils, botanicals",
+    "packaging": "paper wrap",
+    "brand": "PureBar",
+    "image_url": "https://tse2.mm.bing.net/th/id/OIP.45Ug_u9XnboLMtLRBGPRqQHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1047",
+    "name": "Natural Roll-On Deodorant 50ml",
+    "description": "Eco-friendly roll-on deodorant without harmful aerosols.",
+    "category": "Personal Care",
+    "price": 199,
+    "material": "natural alum, essential oils",
+    "packaging": "glass bottle",
+    "brand": "EcoFresh",
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.dBCjDVqiWegTb8ZMapiDVQHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1048",
+    "name": "Eco-Friendly Multi-Purpose Cleaner 1L",
+    "description": "Plant-based cleaner safe for all surfaces, recycled bottle.",
+    "category": "Household",
+    "price": 220,
+    "material": "plant-based surfactants",
+    "packaging": "recycled plastic bottle",
+    "brand": "GreenClean",
+    "image_url": "https://tse3.mm.bing.net/th/id/OIP.4bQpE59l6kt9B3ipRqP02AHaHa?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1049",
+    "name": "Organic Cotton T-Shirt M",
+    "description": "Soft t-shirt made from 100% organic cotton and eco-dyes.",
+    "category": "Clothing",
+    "price": 849,
+    "material": "organic cotton",
+    "packaging": "compostable mailer",
+    "brand": "EcoWear",
+    "image_url": "https://tse1.mm.bing.net/th/id/OIP.VAEArnK13sZq-KKStlE8LgHaJQ?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1050",
+    "name": "Solar Power Bank 10000mAh",
+    "description": "Rechargeable via solar power, casing from recycled plastic.",
+    "category": "Electronics",
+    "price": 1599,
+    "material": "recycled plastic, lithium-ion",
+    "packaging": "recycled cardboard box",
+    "brand": "SunCharge",
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.yfzV7Pq40vFJNF0jLv7InwHaHj?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
+  },
+  {
+    "_id": "1051",
+    "name": "Dry Wood Highlighter Pencils 6pcs",
+    "description": "Plastic-free highlighter pencils made from sustainable wood.",
+    "category": "Stationery",
+    "price": 135,
+    "material": "sustainable wood",
+    "packaging": "recycled cardboard box",
+    "brand": "EcoWrite",
+    "image_url": "https://tse4.mm.bing.net/th/id/OIP.djQzM7nyczEyJVmXjufWXAAAAA?pid=Api&P=0&h=180",
+    "greenAlternativeId": null
   }
 ]
