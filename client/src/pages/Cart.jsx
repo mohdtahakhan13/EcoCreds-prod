@@ -363,7 +363,7 @@ export default function Cart() {
       });
       const ourOrder = oRes.data;
       const options = {
-        key: rzp_test_St6ALFn6Lll7Zy,
+        key: import.meta.env.VITE_RAZORPAY_KEY,
         amount: rOrder.amount, currency: rOrder.currency,
         name: 'EcoCred', description: 'Sustainable Shopping',
         order_id: rOrder.id,
