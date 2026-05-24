@@ -67,3 +67,5 @@ mongoose
   )
 )
 .catch(err => console.error(err));
+console.log('RAZORPAY_KEY_ID present:', !!process.env.RAZORPAY_KEY_ID);
+console.log('RAZORPAY_KEY_SECRET present:', !!process.env.RAZORPAY_KEY_SECRET);
